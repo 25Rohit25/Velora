@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { Home, MessageCircleHeart, BookHeart, User, Camera } from 'lucide-react'
+import { Home, MessageCircleHeart, BookHeart, User, Camera, Lightbulb } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
@@ -10,6 +10,7 @@ const navItems = [
     { href: '/home', icon: Home, label: 'Home' },
     { href: '/memories', icon: Camera, label: 'Moments' },
     { href: '/chat', icon: MessageCircleHeart, label: 'Chat' },
+    { href: '/ideas', icon: Lightbulb, label: 'Ideas' },
     { href: '/journal', icon: BookHeart, label: 'Diary' },
     { href: '/profile', icon: User, label: 'Me' },
 ]
@@ -19,7 +20,7 @@ export default function BottomNav() {
 
     return (
         <div className="fixed bottom-6 left-0 right-0 flex justify-center z-50 pointer-events-none">
-            <nav className="glass-card !rounded-full px-8 py-4 flex items-center space-x-8 pointer-events-auto shadow-2xl shadow-slate-200/50">
+            <nav className="glass-card !rounded-full px-5 py-3 flex items-center space-x-5 pointer-events-auto shadow-2xl shadow-slate-200/50">
                 {navItems.map((item) => {
                     const isActive = pathname.startsWith(item.href)
                     const Icon = item.icon
