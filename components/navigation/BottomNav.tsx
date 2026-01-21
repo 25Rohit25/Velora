@@ -2,16 +2,16 @@
 
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { Home, MessageCircleHeart, BookHeart, User, Sparkles, Users } from 'lucide-react'
+import { Home, MessageCircleHeart, BookHeart, User, Camera } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
 const navItems = [
     { href: '/home', icon: Home, label: 'Home' },
-    { href: '/community', icon: Users, label: 'Community' },
-    { href: '/chat', icon: MessageCircleHeart, label: 'Chat' }, // Changed label from 'Us' to 'Chat'
-    { href: '/journal', icon: BookHeart, label: 'Journal' },
-    { href: '/profile', icon: User, label: 'Profile' },
+    { href: '/memories', icon: Camera, label: 'Moments' },
+    { href: '/chat', icon: MessageCircleHeart, label: 'Chat' },
+    { href: '/journal', icon: BookHeart, label: 'Diary' },
+    { href: '/profile', icon: User, label: 'Me' },
 ]
 
 export default function BottomNav() {

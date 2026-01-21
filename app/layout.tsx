@@ -35,6 +35,8 @@ export const metadata: Metadata = {
   description: "A private, emotionally intelligent relationship app for couples.",
 };
 
+import AuthProvider from "@/components/providers/AuthProvider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -48,7 +50,9 @@ export default function RootLayout({
           <div className="blob-2"></div>
           <div className="blob-3"></div>
         </div>
-        {children}
+        <AuthProvider>
+          {children}
+        </AuthProvider>
       </body>
     </html>
   );
